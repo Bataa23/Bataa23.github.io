@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stopwatch</title>
+    </head>
+    <body>
+        <h3>Stopwatch</h3>
+        <div id="display">00:00:00:00</div>
+        <script>
+            var doli=0
+            var sec=0
+            var min=0
+            var hour=0
+            function myFunction(){
+                document.getElementById("display").innerHTML =min+":"+sec+":"+doli
+                doli++
+                if (doli==100){
+                doli=0
+                sec++
+            }   
+                if (sec==60){
+                    sec=0
+                    min++
+                }
+                if (min==60){
+                    min=0
+                    hour++
+                }    
+            }            
+            setInterval(myFunction,10)
+           
+        </script>
+        
+            <button id="start">Start</button>
+            <button id="reset">Reset</button>
+            <button id="lap">Lap</button>
+    </body>
+</html>
